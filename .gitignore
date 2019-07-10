@@ -1,0 +1,4 @@
+# this is here becase it excludes this file
+# because we dont want to add it to git
+# as it is just our dependancies
+node_modules
