@@ -1,9 +1,88 @@
 // work in this folder for your css and 
 // not the actual css file
 
-$primary-color: #444;
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+}
 
 body {
+    @include background;
     background: $primary-color;
     color: #ffff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+//headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    //in scss file you can nest code
+    //using & it will add to it rather than apply to nested inside h1, h2 and h3 
+    &.lg-heading {
+        //rem unit is a multiplier of the html tag font size
+        //default is 16px so 6 x 16
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    //z index is how close you want an element to you
+    //the bigger the number the closer to you it is
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    height: 100;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            // vh is view port heigth
+            // a web page is 100 slices across
+            // this takes up 20 of these
+            margin-top: 20vh;
+        }
+    }
 }
