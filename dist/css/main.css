@@ -96,7 +96,7 @@
 body {
   background: #444;
   color: #fff;
-  height: 100%;
+  height: 100px;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
@@ -143,7 +143,7 @@ header {
   color: #eece1a; }
 
 main {
-  padding: 4rem;
+  padding: 2rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
