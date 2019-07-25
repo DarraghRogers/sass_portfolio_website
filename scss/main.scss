@@ -31,7 +31,9 @@ h3 {
     &.lg-heading {
         //rem unit is a multiplier of the html tag font size
         //default is 16px so 6 x 16
-        font-size: 6rem;
+        font-size: 4rem;
+        //font-size: calc(6rem + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+        //font-size: calc((96px * 1px) + (96px - 48px) * (100vw - (100px * 1px) / (500px - 100px)));
     }
 
     &.sm-heading {
@@ -93,8 +95,7 @@ main {
 .about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas:
-        'bioimage bio bio'
+    grid-template-areas: 'bioimage bio bio'
         'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
 
@@ -212,10 +213,6 @@ main {
     color: set-text-color($primary-color);
     height: 60px;
 }
-
-
-
-
 
 
 @import 'mobile';
