@@ -31,7 +31,7 @@ h3 {
     &.lg-heading {
         //rem unit is a multiplier of the html tag font size
         //default is 16px so 6 x 16
-        font-size: 4rem;
+        font-size: 8vw;
         //font-size: calc(6rem + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
         //font-size: calc((96px * 1px) + (96px - 48px) * (100vw - (100px * 1px) / (500px - 100px)));
     }
